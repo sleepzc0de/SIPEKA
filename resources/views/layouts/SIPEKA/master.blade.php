@@ -10,6 +10,7 @@
 	<link href="{{asset('assets/fonts/inter/inter.css')}}" rel="stylesheet" type="text/css">
 	<link href="{{asset('assets/icons/phosphor/styles.min.css')}}" rel="stylesheet" type="text/css">
 	<link href="{{asset('assets/core/assets/css/ltr/all.min.css')}}" id="stylesheet" rel="stylesheet" type="text/css">
+    @yield('css')
 	<!-- /global stylesheets -->
 
 	<!-- Core JS files -->
@@ -18,11 +19,14 @@
 	<!-- /core JS files -->
 
 	<!-- Theme JS files -->
+    <script src="{{asset('assets/js/jquery/jquery.min.js')}}"></script>
 	<script src="{{asset('assets/js/vendor/visualization/d3/d3.min.js')}}"></script>
 	<script src="{{asset('assets/js/vendor/visualization/d3/d3_tooltip.js')}}"></script>
 
+
 	<script src="{{asset('assets/core/assets/js/app.js')}}"></script>
 	<script src="{{asset('assets/demo/pages/dashboard.js')}}"></script>
+    @yield('js')
 	{{-- <script src="{{asset('assets/demo/charts/pages/dashboard/streamgraph.js')}}"></script>
 	<script src="{{asset('assets/demo/charts/pages/dashboard/sparklines.js')}}"></script>
 	<script src="{{asset('assets/demo/charts/pages/dashboard/lines.js')}}"></script>
