@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('ref_kab_kotas', function (Blueprint $table) {
             $table->id();
             $table->string('nama_kab_kota')->nullable();
+            $table->unsignedBigInteger('provinsi_id');
+            $table->foreign('provinsi_id')->references('id')->on('ref_provinsis');
             $table->timestamps();
         });
     }
