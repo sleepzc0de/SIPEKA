@@ -20,6 +20,10 @@ Route::middleware('auth')->group(function () {
 
 
 Route::resource('penataan',PenataanController::class);
+Route::get('get-data-penataan',[PenataanController::class,'getDataPenataan'])->name('data.penataan');
+Route::get('/get-kab-kota/{provinsiId}', [PenataanController::class, 'getKabKota'])->name('get-kab-kota');
+
+
 
 
 require __DIR__.'/auth.php';

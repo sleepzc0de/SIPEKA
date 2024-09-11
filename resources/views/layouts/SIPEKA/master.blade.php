@@ -10,6 +10,9 @@
 	<link href="{{asset('assets/fonts/inter/inter.css')}}" rel="stylesheet" type="text/css">
 	<link href="{{asset('assets/icons/phosphor/styles.min.css')}}" rel="stylesheet" type="text/css">
 	<link href="{{asset('assets/core/assets/css/ltr/all.min.css')}}" id="stylesheet" rel="stylesheet" type="text/css">
+    <!-- Toastr CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+
     @yield('css')
 	<!-- /global stylesheets -->
 
@@ -26,6 +29,11 @@
 
 	<script src="{{asset('assets/core/assets/js/app.js')}}"></script>
 	<script src="{{asset('assets/demo/pages/dashboard.js')}}"></script>
+    <!-- jQuery -->
+{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> --}}
+
+<!-- Toastr JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     @yield('js')
 	{{-- <script src="{{asset('assets/demo/charts/pages/dashboard/streamgraph.js')}}"></script>
 	<script src="{{asset('assets/demo/charts/pages/dashboard/sparklines.js')}}"></script>

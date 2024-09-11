@@ -11,5 +11,13 @@ class RefKabKota extends Model
 
     protected $fillable = [
         'nama_kab_kota',
+        'provinsi_id',
+        'isKota',
+        'latitude',
+        'longitude'
     ];
+
+    public function Provinsi(){
+        return $this->belongsTo(RefProvinsi::class);
+    }
 }

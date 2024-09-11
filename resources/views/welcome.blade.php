@@ -40,22 +40,22 @@
                             <span class="text-muted">APPROVED</span>
                         </div>
                     </div> --}}
-                     <!-- Current server load -->
-                     <div class="d-flex align-items-center mb-sm-0">
-                     <div class="card bg-success text-white">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center">
-                                <h3 class="mb-0">25 Approved</h3>
+                    <!-- Current server load -->
+                    <div class="d-flex align-items-center mb-sm-0">
+                        <div class="card bg-success text-white">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <h3 class="mb-0">25 Approved</h3>
+                                </div>
+
+                                <div>
+                                    Konsep Penataan Sudah <b>SELESAI</b>
+                                </div>
                             </div>
 
-                            <div>
-                                Konsep Penataan Sudah <b>SELESAI</b>
-                            </div>
+                            <div class="rounded-bottom overflow-hidden" id="server-load"></div>
                         </div>
-
-                        <div class="rounded-bottom overflow-hidden" id="server-load"></div>
                     </div>
-                     </div>
                     <!-- /current server load -->
 
                     {{-- <div class="d-flex align-items-center mb-3 mb-sm-0">
@@ -68,22 +68,22 @@
                             <span class="text-muted">DISCUSS</span>
                         </div>
                     </div> --}}
-                     <!-- Current server load -->
-                     <div class="d-flex align-items-center mb-sm-0">
-                     <div class="card bg-warning text-white">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center">
-                                <h3 class="mb-0">10 Discuss</h3>
+                    <!-- Current server load -->
+                    <div class="d-flex align-items-center mb-sm-0">
+                        <div class="card bg-warning text-white">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <h3 class="mb-0">10 Discuss</h3>
+                                </div>
+
+                                <div>
+                                    Konsep Penataan Perlu <b>DISKUSI</b>
+                                </div>
                             </div>
 
-                            <div>
-                                Konsep Penataan Perlu <b>DISKUSI</b>
-                            </div>
+                            <div class="rounded-bottom overflow-hidden" id="server-load"></div>
                         </div>
-
-                        <div class="rounded-bottom overflow-hidden" id="server-load"></div>
                     </div>
-                     </div>
                     <!-- /current server load -->
                     {{-- <div class="d-flex align-items-center mb-3 mb-sm-0">
             <div class="ms-3">
@@ -96,19 +96,19 @@
         </div> --}}
                     <!-- Current server load -->
                     <div class="d-flex align-items-center mb-sm-0">
-                    <div class="card bg-danger text-white">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center">
-                                <h3 class="mb-0">2 Stuck</h3>
+                        <div class="card bg-danger text-white">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <h3 class="mb-0">2 Stuck</h3>
+                                </div>
+
+                                <div>
+                                    Konsep Penataan Perlu <b>DIKERJAKAN</b>
+                                </div>
                             </div>
 
-                            <div>
-                                Konsep Penataan Perlu <b>DIKERJAKAN</b>
-                            </div>
+                            <div class="rounded-bottom overflow-hidden" id="server-load"></div>
                         </div>
-
-                        <div class="rounded-bottom overflow-hidden" id="server-load"></div>
-                    </div>
                     </div>
                     <!-- /current server load -->
 
@@ -149,7 +149,8 @@
                                         </div>
                                     </div>
                                 </td>
-                                <td><span class="text-muted"><a href="#" class="link-teal">Kota Cirebon</a></span></td>
+                                <td><span class="text-muted"><a href="#" class="link-teal">Kota Cirebon</a></span>
+                                </td>
                                 <td><span class="text-muted">Aul, Dwi, Budi</span></td>
                                 <td><span class="text-muted">Andrianto, Tatan</span></td>
                                 <td><span class="text-muted">Anita</span></td>
@@ -194,7 +195,8 @@
                                         </div>
                                     </div>
                                 </td>
-                                <td><span class="text-muted"><a href="#" class="link-teal">Kota Semarang</a></span></td>
+                                <td><span class="text-muted"><a href="#" class="link-teal">Kota Semarang</a></span>
+                                </td>
                                 <td><span class="text-muted">Billy, Winny</span></td>
                                 <td><span class="text-muted">Nuzfari</span></td>
                                 <td><span class="text-muted">Indra</span></td>
@@ -247,77 +249,81 @@
     {{-- DATATABLES --}}
     <script>
         /* ------------------------------------------------------------------------------
- *
- *  # Basic datatables
- *
- *  Demo JS code for datatable_basic.html page
- *
- * ---------------------------------------------------------------------------- */
+         *
+         *  # Basic datatables
+         *
+         *  Demo JS code for datatable_basic.html page
+         *
+         * ---------------------------------------------------------------------------- */
 
 
-// Setup module
-// ------------------------------
+        // Setup module
+        // ------------------------------
 
-const DatatableBasic = function() {
-
-
-//
-// Setup module components
-//
-
-// Basic Datatable examples
-const _componentDatatableBasic = function() {
-    if (!$().DataTable) {
-        console.warn('Warning - datatables.min.js is not loaded.');
-        return;
-    }
-
-    // Setting datatable defaults
-    $.extend( $.fn.dataTable.defaults, {
-        autoWidth: false,
-        columnDefs: [{
-            orderable: false,
-            width: 100,
-            targets: [ 5 ]
-        }],
-        dom: '<"datatable-header"fl><"datatable-scroll"t><"datatable-footer"ip>',
-        language: {
-            search: '<span class="me-3">Cari Data:</span> <div class="form-control-feedback form-control-feedback-end flex-fill">_INPUT_<div class="form-control-feedback-icon"><i class="ph-magnifying-glass opacity-50"></i></div></div>',
-            searchPlaceholder: 'Ketik untuk mencari...',
-            lengthMenu: '<span class="me-3">Show:</span> _MENU_',
-            paginate: { 'first': 'First', 'last': 'Last', 'next': document.dir == "rtl" ? '&larr;' : '&rarr;', 'previous': document.dir == "rtl" ? '&rarr;' : '&larr;' }
-        }
-    });
-
-    // Basic datatable
-    $('.datatable-basic').DataTable();
-
-    // Resize scrollable table when sidebar width changes
-    $('.sidebar-control').on('click', function() {
-        table.columns.adjust().draw();
-    });
-};
+        const DatatableBasic = function() {
 
 
-//
-// Return objects assigned to module
-//
+            //
+            // Setup module components
+            //
 
-return {
-    init: function() {
-        _componentDatatableBasic();
-    }
-}
-}();
+            // Basic Datatable examples
+            const _componentDatatableBasic = function() {
+                if (!$().DataTable) {
+                    console.warn('Warning - datatables.min.js is not loaded.');
+                    return;
+                }
+
+                // Setting datatable defaults
+                $.extend($.fn.dataTable.defaults, {
+                    autoWidth: false,
+                    columnDefs: [{
+                        orderable: false,
+                        width: 100,
+                        targets: [5]
+                    }],
+                    dom: '<"datatable-header"fl><"datatable-scroll"t><"datatable-footer"ip>',
+                    language: {
+                        search: '<span class="me-3">Cari Data:</span> <div class="form-control-feedback form-control-feedback-end flex-fill">_INPUT_<div class="form-control-feedback-icon"><i class="ph-magnifying-glass opacity-50"></i></div></div>',
+                        searchPlaceholder: 'Ketik untuk mencari...',
+                        lengthMenu: '<span class="me-3">Show:</span> _MENU_',
+                        paginate: {
+                            'first': 'First',
+                            'last': 'Last',
+                            'next': document.dir == "rtl" ? '&larr;' : '&rarr;',
+                            'previous': document.dir == "rtl" ? '&rarr;' : '&larr;'
+                        }
+                    }
+                });
+
+                // Basic datatable
+                $('.datatable-basic').DataTable();
+
+                // Resize scrollable table when sidebar width changes
+                $('.sidebar-control').on('click', function() {
+                    table.columns.adjust().draw();
+                });
+            };
 
 
-// Initialize module
-// ------------------------------
+            //
+            // Return objects assigned to module
+            //
 
-document.addEventListener('DOMContentLoaded', function() {
-DatatableBasic.init();
-});
+            return {
+                init: function() {
+                    _componentDatatableBasic();
+                }
+            }
+        }();
 
+
+        // Initialize module
+        // ------------------------------
+
+        document.addEventListener('DOMContentLoaded', function() {
+            DatatableBasic.init();
+        });
     </script>
     {{-- END DATATABLES --}}
 @endsection

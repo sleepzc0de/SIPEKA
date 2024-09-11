@@ -11,6 +11,13 @@ class RefProvinsi extends Model
 
     protected $fillable = [
         'nama_provinsi',
+        'nama_ibukota',
         'gambar_provinsi'
     ];
+
+    public function KabKota(){
+        return $this->hasMany(RefKabKota::class);
+    }
+
+
 }
