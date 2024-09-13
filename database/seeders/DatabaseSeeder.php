@@ -13,11 +13,48 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        $this->call([
+            // PegawaiRomadanSakemSeeder::class,
+            ProvinsiSeeder::class,
+            KabKotaAcehSeeder::class,
+            KabKotaBaliSeeder::class,
+            KabKotaBangkaBelitungSeeder::class,
+            KabKotaBantenSeeder::class,
+            KabKotaBengkuluSeeder::class,
+            KabKotaDIYSeeder::class,
+            KabKotaDKIJakartaSeeder::class,
+            KabKotaGorontaloSeeder::class,
+            KabKotaJambiSeeder::class,
+            KabKotaJawaBaratSeeder::class,
+            KabKotaJawaTengahSeeder::class,
+            KabKotaJawaTimurSeeder::class,
+            KabKotaKalimantanBaratSeeder::class,
+            KabKotaKalimantanSelatanSeeder::class,
+            KabKotaKalimantanTengahSeeder::class,
+            KabKotaKalimantanTimurSeeder::class,
+            KabKotaKalimantanUtaraSeeder::class,
+            KabKotaKepulauanRiauSeeder::class,
+            KabKotaLampungSeeder::class,
+            KabKotaMalukuSeeder::class,
+            KabKotaMalukuUtaraSeeder::class,
+            KabKotaNTBSeeder::class,
+            KabKotaNTTSeeder::class,
+            KabKotaPapuaBaratSeeder::class,
+            KabKotaPapuaBaratDayaSeeder::class,
+            KabKotaPapuaPegununganSeeder::class,
+            KabKotaPapuaSeeder::class,
+            KabKotaPapuaSelatanSeeder::class,
+            KabKotaPapuaTengahSeeder::class,
+            KabKotaRiauSeeder::class,
+            KabKotaSulawesiBaratSeeder::class,
+            KabKotaSulawesiSelatanSeeder::class,
+            KabKotaSulawesiTengahSeeder::class,
+            KabKotaSulawesiTenggaraSeeder::class,
+            KabKotaSulawesiUtaraSeeder::class,
+            KabKotaSumateraBaratSeeder::class,
+            KabKotaSumateraUtaraSeeder::class,
+            KabKotaSumateraSelatanSeeder::class
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
         ]);
     }
 }
